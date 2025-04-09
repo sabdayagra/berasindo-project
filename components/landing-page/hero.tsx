@@ -10,8 +10,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="flex flex-row lg:flex-col md:justify-between gap-5 w-full lg:w-1/3">
-        <Image alt="her-2" width={1920} height={1080} src="/assets/hero2.png" className="w-full h-[100px] lg:h-[288px]" />
-        <Image alt="her-2" width={1920} height={1080} src="/assets/hero3.png" className="w-full h-[100px] lg:h-[288px]" />
+        <Image alt="her-2" width={1920} height={1080} src="/assets/hero2.png" className="w-full h-[110px] lg:h-[288px] object-cover rounded-lg" />
+        <Image alt="her-2" width={1920} height={1080} src="/assets/hero3.png" className="w-full h-[110px] lg:h-[288px] object-cover rounded-lg" />
       </div>
     </div>
   );

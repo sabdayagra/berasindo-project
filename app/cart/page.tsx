@@ -81,7 +81,7 @@ const page: React.FC = () => {
             <div key={item.id} className="flex items-center justify-between p-4 mb-4 rounded-lg border">
               <div className="flex items-center">
                 <input type="checkbox" checked={item.checked} onChange={() => handleItemCheck(item.id)} className="" />
-                <Image width={1920} height={1080} src={item.image} alt={item.name} className="w-[100px] lg:w-[220px] h-[75px] lg:h-[154px] border m-3 rounded-lg" />
+                <Image width={1920} height={1080} src={item.image} alt={item.name} className="w-[100px] lg:w-[220px] h-[90px] lg:h-[154px] border m-3 rounded-lg" />
                 <div className="space-y-4">
                   <h4 className="font-semibold text-sm lg:text-[20px]">{item.name}</h4>
                   <p className="text-base lg:text-[32px] font-bold">Rp{item.price.toLocaleString()}</p>

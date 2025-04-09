@@ -34,7 +34,7 @@ export default function Footer() {
             </div>
           )}
 
-          <p className="text-center sm:text-left">© 2025 Qudo Buana Nawakara. Semua Hak Dilindungi.</p>
+          <p className="text-center sm:text-left text-sm lg:text-base">© 2025 Qudo Buana Nawakara. Semua Hak Dilindungi.</p>
         </div>
 
         {/* Kanan - Logo + Store Buttons */}

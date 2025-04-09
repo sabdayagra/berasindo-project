@@ -149,7 +149,7 @@ export default function Checkout() {
             <div className="text-lg font-bold mb-4">Rp{total.toLocaleString()}</div>
           </div>
 
-          <button className="bg-[#f07e3e] cursor-pointer hover:bg-white hover:border hover:text-[#009444] hover:border-[#009444] text-white font-bold py-2 w-full rounded-lg text-[16px]">BAYAR SEKARANG</button>
+          <button className="bg-[#f07e3e] cursor-pointer hover:bg-white hover:border hover:text-[#f07e3e] hover:border-[#f07e3e] text-white font-bold py-2 w-full rounded-lg text-[16px]">BAYAR SEKARANG</button>
         </div>
       </div>
     </div>

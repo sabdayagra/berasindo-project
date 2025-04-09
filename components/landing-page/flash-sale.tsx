@@ -10,7 +10,7 @@ export default function FlashSale() {
     <section className="bg-[#f7f7f7] py-8 px-4 md:px-20 my-6 w-full">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-[20px] md:text-[32px] font-bold">Flash Sale Hari Ini</h2>
-        <button className="text-[#CB8055] text-lg flex items-center gap-1">
+        <button className="text-[#CB8055] text-[16px] flex items-center gap-1">
           Lihat Semua{" "}
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
             <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m10 17l5-5l-5-5" />
@@ -25,7 +25,7 @@ export default function FlashSale() {
             <span className="bg-[#EA4B48] text-white text-xs font-semibold px-2 py-1 rounded">Diskon 50%</span>
             <span className="bg-[#2388FF] text-white text-xs font-semibold px-2 py-1 rounded">Best Sale</span>
           </div>
-          <Image onClick={() => router.push("/detail")} src="/assets/beras1.png" alt="beras putih" width={1920} height={1080} className="mb-4 cursor-pointer w-[325px ] lg:w-[525px] h-[200px] lg:h-[446px]" />
+          <Image onClick={() => router.push("/detail")} src="/assets/beras1.png" alt="beras putih" width={1920} height={1080} className="mb-4 cursor-pointer w-[325px ] lg:w-[525px] h-[250px] lg:h-[446px]" />
           <button className="bg-[#F07E3E] text-white text-sm py-2 px-4 rounded-full w-full flex items-center justify-center gap-1 mb-4">
             Tambah ke Keranjang <ShoppingCart size={16} />
           </button>
@@ -66,7 +66,7 @@ export default function FlashSale() {
             .slice(0, 6)
             .map((item, i) => (
               <div key={i} className="bg-white p-2 rounded-md relative flex flex-col items-center shadow-sm">
-                <Image src={item.image} alt={item.name} width={1920} height={1080} className="w-[100px] lg:w-[264px] h-[150px] lg:h-[270px] mb-2" />
+                <Image src={item.image} alt={item.name} width={1920} height={1080} className="w-[100px] lg:w-[264px] h-[100px] lg:h-[270px] mb-2" />
                 <h4 className="text-[14px] self-start">{item.name}</h4>
                 <p className="font-semibold text-[16px] self-start">{item.price}</p>
                 <div className="text-yellow-400 text-xs mt-1 self-start">

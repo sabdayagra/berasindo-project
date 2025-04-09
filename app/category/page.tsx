@@ -132,7 +132,7 @@ const CategoryPage = () => {
 
         {/* Konten Kanan */}
         <div className="ml-0 lg:ml-4 w-full lg:w-[80%]">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 mb-4">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 my-4">
             <p className="text-sm text-gray-700">
               Menampilkan 1 - 60 item di Lokasi <strong>&apos;DKI Jakarta&apos;</strong>
             </p>

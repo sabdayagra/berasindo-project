@@ -32,16 +32,18 @@ const Navbar = () => {
         {/* Right */}
         <div className="flex items-center gap-4 ml-auto">
           {/* Icon keranjang */}
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <path
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="1.5"
-              d="M3.873 17.02L2.669 9.84c-.182-1.086-.273-1.628.019-1.984c.291-.356.827-.356 1.898-.356h14.828c1.071 0 1.607 0 1.898.356c.292.356.2.898.019 1.984l-1.204 7.18c-.399 2.38-.598 3.569-1.413 4.275C17.9 22 16.726 22 14.378 22H9.622c-2.348 0-3.522 0-4.336-.706c-.815-.705-1.014-1.895-1.413-4.275M17.5 7.5a5.5 5.5 0 1 0-11 0"
-            />
-          </svg>
+          <button onClick={() => router.push("/cart")}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path
+                fill="none"
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="1.5"
+                d="M3.873 17.02L2.669 9.84c-.182-1.086-.273-1.628.019-1.984c.291-.356.827-.356 1.898-.356h14.828c1.071 0 1.607 0 1.898.356c.292.356.2.898.019 1.984l-1.204 7.18c-.399 2.38-.598 3.569-1.413 4.275C17.9 22 16.726 22 14.378 22H9.622c-2.348 0-3.522 0-4.336-.706c-.815-.705-1.014-1.895-1.413-4.275M17.5 7.5a5.5 5.5 0 1 0-11 0"
+              />
+            </svg>
+          </button>
 
           {/* Garis vertikal */}
           <div className="border-l-2 h-7 border-slate-300" />
@@ -72,7 +74,16 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden absolute bg-[#f7f7f7] dark:bg-slate-600 px-4 py-3 w-fit space-y-3 z-50 right-4">
-          <div className="md:hidden flex gap-2">
+          <div className="md:hidden flex flex-col items-center w-full max-w-sm justify-center gap-2">
+            <button onClick={() => router.push("/category")} className="font-bold cursor-pointer mr-3 text-[14px] text-[#f07e3e]">
+              Kategori
+            </button>
+            <div className="flex items-center w-full bg-white border border-gray-300 rounded-full px-[4px] py-[4px]">
+              <Search className="text-[#f07e3e] w-4 h-4 mr-2" />
+              <input type="text" placeholder="Cari jenis beras disini..." className="w-full text-sm outline-none bg-transparent placeholder:text-gray-500" />
+            </div>
+          </div>
+          <div className="md:hidden flex gap-2 justify-center">
             <Link href="/login">
               <button className="bg-[#f07e3e] cursor-pointer hover:bg-white hover:border hover:border-[#f07e3e] hover:text-[#f07e3e] text-white text-sm px-4 py-1.5 rounded-md font-medium">Masuk</button>
             </Link>

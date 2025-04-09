@@ -17,7 +17,7 @@ export default function PopularProduct() {
   return (
     <section className="my-8 px-4 lg:px-20">
       <div className="flex justify-between items-center mb-4">
-        <h2 className="text-[32px] font-bold">Produk Populer</h2>
+        <h2 className="text-[17px] lg:text-[32px] font-bold">Produk Populer</h2>
         <button className="text-[16px] text-[#CB8055] flex items-center gap-1">
           Lihat Semua{" "}
           <span className="text-[#CB8055] text-[16px]">
@@ -32,7 +32,7 @@ export default function PopularProduct() {
         <CarouselContent className="-ml-2 sm:-ml-4">
           {popularProducts.map((item, i) => (
             <CarouselItem key={i} className="pl-2 sm:pl-4 basis-1/2 md:basis-1/4 lg:basis-1/5">
-              <div className="border rounded-md p-4 relative flex flex-col items-center bg-white shadow-sm w-[264x] h-[327px]">
+              <div className="border rounded-md p-4 relative flex flex-col items-center bg-white shadow-sm w-[264x] h-fit lg:h-[327px]">
                 {/* Diskon */}
                 {item.discount && <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-0.5 rounded">Diskon 50%</span>}
 
@@ -53,7 +53,7 @@ export default function PopularProduct() {
                 </div>
 
                 {/* cart icon */}
-                <div className="absolute bottom-10 right-4 bg-orange-100 rounded-full p-1">
+                <div className="absolute bottom-1 lg:bottom-10 right-4 bg-orange-100 rounded-full p-1">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path
                       fill="none"
