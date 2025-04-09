@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
-import { Truck, Headphones, ShieldCheck, Package } from "lucide-react";
 import Image from "next/image";
+import { Reveal } from "../ui/Reveal";
 
 const benefits = [
   {
@@ -35,21 +37,25 @@ const benefits = [
 
 const HeroBottom = () => {
   return (
-    <div className="px-4 lg:px-20 ">
-      <div className="bg-white rounded-xl shadow-lg py-6 px-4 sm:px-6 md:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((item: any, index) => (
-            <div key={index} className="flex justify-start lg:justify-center items-start lg:items-center  gap-3">
-              <Image alt="icon" src={item.icon} width={item.width} height={item.height} className="self-center" />{" "}
-              <div>
-                <h4 className="font-semibold text-sm">{item.title}</h4>
-                <p className="text-sm text-gray-600">{item.desc}</p>
-              </div>
+    <>
+      <Reveal>
+        <div className="px-4 lg:px-20 ">
+          <div className="bg-white rounded-xl shadow-lg py-6 px-4 sm:px-6 md:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((item: any, index) => (
+                <div key={index} className="flex justify-start lg:justify-center items-start lg:items-center  gap-3">
+                  <Image alt="icon" src={item.icon} width={item.width} height={item.height} className="self-center" />{" "}
+                  <div>
+                    <h4 className="font-semibold text-sm">{item.title}</h4>
+                    <p className="text-sm text-gray-600">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
-      </div>
-    </div>
+      </Reveal>
+    </>
   );
 };
 
