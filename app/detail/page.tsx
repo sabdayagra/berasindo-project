@@ -68,7 +68,7 @@ export default function ProductPage() {
             <h1 className="text-[20px] font-bold uppercase">{product.name}</h1>
             <div className="flex flex-row gap-4">
               <p className="text-[16px] text-gray-600 mb-2">Terjual: {product.sold}</p>
-              <div className="flex items-center gap-1 text-yellow-400 text-[16px] mb-4">
+              <div className="flex items-center gap-1 text-yellow-400 text-[16px]">
                 {"★".repeat(product.rating)} <span className="text-gray-500 ml-1">({product.reviewCount})</span>
               </div>
             </div>

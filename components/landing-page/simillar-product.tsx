@@ -30,7 +30,7 @@ const products: Product[] = [
 const SimillarProducts: React.FC = () => {
   const router = useRouter();
   return (
-    <div className="container px-4 lg:px-20 my-16">
+    <div className="w-full px-4 lg:px-20 my-16">
       <div className="w-full">
         {/* Header */}
         <div className="flex items-center justify-between">
