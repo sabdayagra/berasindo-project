@@ -6,6 +6,7 @@ import PopularCategories from "@/components/landing-page/popular-category";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const CategoryPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,8 +16,9 @@ const CategoryPage = () => {
       name: "Beras Putih",
       desc: "1 kg / utuh",
       price: 34000,
-      img: "/assets/beras1.png",
+      img: "/assets/beras3.png",
       rating: 4,
+      slug: "beras-putih-1",
     },
     {
       name: "Beras Jasmine",
@@ -24,6 +26,7 @@ const CategoryPage = () => {
       price: 32000,
       img: "/assets/beras2.png",
       rating: 4,
+      slug: "beras-jasmine",
     },
     {
       name: "Beras Basmati",
@@ -31,6 +34,7 @@ const CategoryPage = () => {
       price: 75000,
       img: "/assets/beras3.png",
       rating: 4,
+      slug: "beras-basmati",
     },
     {
       name: "Beras Merah",
@@ -38,6 +42,7 @@ const CategoryPage = () => {
       price: 57000,
       img: "/assets/beras4.png",
       rating: 4,
+      slug: "beras-merah",
     },
     {
       name: "Beras Jagung",
@@ -45,6 +50,7 @@ const CategoryPage = () => {
       price: 35000,
       img: "/assets/beras5.png",
       rating: 4,
+      slug: "beras-jagung",
     },
     {
       name: "Beras Pipih",
@@ -52,6 +58,7 @@ const CategoryPage = () => {
       price: 16000,
       img: "/assets/beras6.png",
       rating: 4,
+      slug: "beras-pipih",
     },
     {
       name: "Beras Coklat",
@@ -59,6 +66,7 @@ const CategoryPage = () => {
       price: 19000,
       img: "/assets/beras7.png",
       rating: 4,
+      slug: "beras-coklat",
     },
     {
       name: "Beras Putih",
@@ -66,6 +74,7 @@ const CategoryPage = () => {
       price: 65000,
       img: "/assets/beras1.png",
       rating: 4,
+      slug: "beras-putih-1",
     },
   ];
 
@@ -80,9 +89,12 @@ const CategoryPage = () => {
     </div>
   );
 
-  const ProductCard = ({ name, desc, price, img, rating }: (typeof products)[0]) => (
+  const ProductCard = ({ name, desc, price, img, rating, slug }: (typeof products)[0]) => (
     <div className="border rounded-xl p-4 flex flex-col justify-between shadow-sm">
-      <img src={img} alt={name} className="w-full h-32 object-contain" />
+      <Link href={`/detail/${slug}`}>
+        <img src={img} alt={name} className="w-full h-32 object-contain" />
+      </Link>
+
       <div className="mt-3">
         <h4 className="text-gray-800 font-semibold text-base">{name}</h4>
         <p className="text-sm text-gray-500">{desc}</p>
@@ -108,7 +120,7 @@ const CategoryPage = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-20 pb-14 py-4 flex flex-col">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-20 pb-14 flex flex-col pt-16 lg:pt-36">
       <Breadcrumbs />
       <PopularCategories />
 
@@ -132,7 +144,7 @@ const CategoryPage = () => {
 
         {/* Konten Kanan */}
         <div className="ml-0 lg:ml-4 w-full lg:w-[80%]">
-          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 my-4">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 lg:mt-0 mt-4 mb-0 lg:mb-4">
             <p className="text-sm text-gray-700">
               Menampilkan 1 - 60 item di Lokasi <strong>&apos;DKI Jakarta&apos;</strong>
             </p>

@@ -8,7 +8,7 @@ const page = () => {
   return (
     <>
       <Reveal>
-        <div className="px-4 lg:px-20 h-screen lg:h-full py-4 lg:py-18">
+        <div className="px-4 lg:px-20 h-screen lg:h-full pb-4 lg:pb-18 pt-16 lg:pt-36">
           <div className="flex flex-col lg:flex-row">
             {/* kiri */}
             <div className="flex flex-col w-full lg:w-[50%] gap-6">

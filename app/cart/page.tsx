@@ -63,7 +63,7 @@ const page: React.FC = () => {
   };
 
   return (
-    <div className="px-4 lg:px-20 py-6 max-w-screen h-screen">
+    <div className="px-4 lg:px-20 py-6 max-w-screen h-screen pt-16 lg:pt-36">
       <>
         <Reveal>
           <Breadcrumbs />

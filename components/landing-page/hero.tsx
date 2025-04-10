@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <>
       <Reveal>
-        <div className="flex flex-col lg:flex-row items-start justify-center gap-8 px-4 lg:px-20 py-4 mx-auto w-auto mt-6">
+        <div className="flex flex-col lg:flex-row items-start justify-center gap-8 px-4 lg:px-20 pb-4 mx-auto w-auto pt-16 lg:pt-36">
           <div className="lg:w-2/3 lg:h-full ">
             <div className="relative h-[310px] lg:h-[420px]">
               <Image alt="hero-1" width={1920} height={1080} src="/assets/hero1.png" className="w-full h-[310px] lg:h-[600px] rounded-lg object-cover" />

@@ -43,7 +43,7 @@ export default function Checkout() {
   return (
     <>
       <Reveal>
-        <div className="flex flex-col px-4 lg:px-20 py-4 mb-14">
+        <div className="flex flex-col px-4 lg:px-20 pb-4  pt-16 lg:pt-36">
           <Breadcrumbs />
           <div className="flex flex-col lg:flex-row gap-4 mt-4">
             {/* Left side */}

@@ -41,7 +41,7 @@ export default function ProductPage() {
   const total = selectedSize.price * quantity;
 
   return (
-    <div className="w-screen overflow-x-hidden py-4">
+    <div className="w-screen overflow-x-hidden pb-4 pt-16 lg:pt-36">
       <>
         <Reveal>
           <div className="px-4 lg:px-20 mb-4">

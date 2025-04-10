@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="w-full py-0 lg:py-3 px-4 lg:px-20 sticky top-0 z-50 shadow-sm flex items-center justify-between bg-white">
+      <nav className="w-full py-0 lg:py-3 px-4 lg:px-20 fixed top-0 z-50 shadow-sm flex items-center justify-between bg-white">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <Image onClick={() => router.push("/")} src="/assets/logo-beras.png" alt="Berasindo" width={1920} height={1080} className="w-[50px] lg:w-[100px] h-[50px] lg:h-[100px] rounded-full cursor-pointer" />
@@ -73,7 +73,7 @@ const Navbar = () => {
       </nav>
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden absolute bg-[#f7f7f7] dark:bg-slate-600 px-4 py-3 w-fit space-y-3 z-50 right-4">
+        <div className="lg:hidden fixed bg-[#f7f7f7] dark:bg-slate-600 px-4 py-3 w-fit space-y-3 z-50 right-4 top-12">
           <div className="md:hidden flex flex-col items-center w-full max-w-sm justify-center gap-2">
             <button onClick={() => router.push("/category")} className="font-bold cursor-pointer mr-3 text-[14px] text-[#f07e3e]">
               Kategori
