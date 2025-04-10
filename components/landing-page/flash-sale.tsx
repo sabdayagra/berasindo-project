@@ -5,6 +5,20 @@ import { ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Reveal } from "../ui/Reveal";
 
+const flashSaleProducts = [
+  {
+    name: "Beras Putih",
+    slug: "beras-putih-1",
+    image: "/assets/beras1.png",
+    price: 16000,
+    originalPrice: 20000,
+    rating: 5,
+    reviews: 524,
+    discount: "50%",
+    badge: "Best Sale",
+  },
+];
+
 export default function FlashSale() {
   const router = useRouter();
   return (
@@ -23,38 +37,41 @@ export default function FlashSale() {
 
           <div className="flex flex-col lg:flex-row w-full justify-between">
             {/* Kartu besar */}
-            <div className="bg-white border border-orange-200 rounded-md p-4 flex flex-col items-center justify-between w-full lg:w-[40%]">
-              <div className="flex gap-2 mb-2 self-start">
-                <span className="bg-[#EA4B48] text-white text-xs font-semibold px-2 py-1 rounded">Diskon 50%</span>
-                <span className="bg-[#2388FF] text-white text-xs font-semibold px-2 py-1 rounded">Best Sale</span>
+            {flashSaleProducts.map((product, index) => (
+              <div key={index} className="bg-white border border-orange-200 rounded-md p-4 flex flex-col items-center justify-between w-full lg:w-[40%]">
+                <div className="flex gap-2 mb-2 self-start">
+                  <span className="bg-[#EA4B48] text-white text-xs font-semibold px-2 py-1 rounded">Diskon {product.discount}</span>
+                  <span className="bg-[#2388FF] text-white text-xs font-semibold px-2 py-1 rounded">{product.badge}</span>
+                </div>
+                <Image onClick={() => router.push(`/detail/${product.slug}`)} src={product.image} alt={product.name} width={1920} height={1080} className="mb-4 cursor-pointer w-[325px] lg:w-[525px] h-[250px] lg:h-[446px]" />
+                <button className="bg-[#F07E3E] text-white text-sm py-2 px-4 rounded-full w-full flex items-center justify-center gap-1 mb-4">
+                  Tambah ke Keranjang <ShoppingCart size={16} />
+                </button>
+                <h3 className="text-[18px] text-center">{product.name}</h3>
+                <p className="text-[24px] font-bold text-black">
+                  Rp{product.price.toLocaleString("id-ID")} <span className="line-through text-gray-400 text-sm">Rp{product.originalPrice.toLocaleString("id-ID")}</span>
+                </p>
+                <div className="text-yellow-400 text-[12px]">
+                  {"★".repeat(product.rating)}
+                  <span className="text-gray-400 text-[12px]">({product.reviews} Ulasan)</span>
+                </div>
+                <p className="text-[14px] text-gray-400 mt-2">Cepat! Penawaran berakhir dalam:</p>
+                <div className="flex gap-2 mt-1 text-base font-bold">
+                  <div className="text-center">
+                    01 <span className="block font-normal text-[10px]">HARI</span>
+                  </div>
+                  <div className="text-center">
+                    23 <span className="block font-normal text-[10px]">JAM</span>
+                  </div>
+                  <div className="text-center">
+                    34 <span className="block font-normal text-[10px]">MENIT</span>
+                  </div>
+                  <div className="text-center">
+                    57 <span className="block font-normal text-[10px]">DETIK</span>
+                  </div>
+                </div>
               </div>
-              <Image onClick={() => router.push("/detail")} src="/assets/beras1.png" alt="beras putih" width={1920} height={1080} className="mb-4 cursor-pointer w-[325px ] lg:w-[525px] h-[250px] lg:h-[446px]" />
-              <button className="bg-[#F07E3E] text-white text-sm py-2 px-4 rounded-full w-full flex items-center justify-center gap-1 mb-4">
-                Tambah ke Keranjang <ShoppingCart size={16} />
-              </button>
-              <h3 className="text-[18px] text-center">Beras Putih</h3>
-              <p className="text-[24px] font-bold text-black">
-                Rp16.000 <span className="line-through text-gray-400 text-sm">Rp20.000</span>
-              </p>
-              <div className="text-yellow-400 text-[12px]">
-                ★★★★★ <span className="text-gray-400 text-[12px]">(524 Ulasan)</span>
-              </div>
-              <p className="text-[14px] text-gray-400 mt-2">Cepat! Penawaran berakhir dalam:</p>
-              <div className="flex gap-2 mt-1 text-base font-bold">
-                <div className="text-center">
-                  01 <span className="block font-normal text-[10px]">HARI</span>
-                </div>
-                <div className="text-center">
-                  23 <span className="block font-normal text-[10px]">JAM</span>
-                </div>
-                <div className="text-center">
-                  34 <span className="block font-normal text-[10px]">MENIT</span>
-                </div>
-                <div className="text-center">
-                  57 <span className="block font-normal text-[10px]">DETIK</span>
-                </div>
-              </div>
-            </div>
+            ))}
 
             {/* Produk lainnya */}
             <div className="grid grid-cols-2 md:grid-cols-3">
